@@ -1,0 +1,17 @@
+C:\Users\OEN\source\repos\FruitsEcommerce\FruitsEcommerce\bin\Debug\FruitsEcommerce.exe.config
+C:\Users\OEN\source\repos\FruitsEcommerce\FruitsEcommerce\bin\Debug\FruitsEcommerce.exe
+C:\Users\OEN\source\repos\FruitsEcommerce\FruitsEcommerce\bin\Debug\FruitsEcommerce.pdb
+C:\Users\OEN\source\repos\FruitsEcommerce\FruitsEcommerce\obj\Debug\FruitsEcommerce.csproj.AssemblyReference.cache
+C:\Users\OEN\source\repos\FruitsEcommerce\FruitsEcommerce\obj\Debug\FruitsEcommerce.Form1.resources
+C:\Users\OEN\source\repos\FruitsEcommerce\FruitsEcommerce\obj\Debug\FruitsEcommerce.Properties.Resources.resources
+C:\Users\OEN\source\repos\FruitsEcommerce\FruitsEcommerce\obj\Debug\FruitsEcommerce.csproj.GenerateResource.cache
+C:\Users\OEN\source\repos\FruitsEcommerce\FruitsEcommerce\obj\Debug\FruitsEcommerce.csproj.CoreCompileInputs.cache
+C:\Users\OEN\source\repos\FruitsEcommerce\FruitsEcommerce\obj\Debug\FruitsEcommerce.exe
+C:\Users\OEN\source\repos\FruitsEcommerce\FruitsEcommerce\obj\Debug\FruitsEcommerce.pdb
+C:\Users\OEN\source\repos\FruitsEcommerce\FruitsEcommerce\obj\Debug\FruitsEcommerce.Products.resources
+C:\Users\OEN\source\repos\FruitsEcommerce\FruitsEcommerce\obj\Debug\FruitsEcommerce.ucHome.resources
+C:\Users\OEN\source\repos\FruitsEcommerce\FruitsEcommerce\bin\Debug\BusinessLayer.dll
+C:\Users\OEN\source\repos\FruitsEcommerce\FruitsEcommerce\bin\Debug\DataAccessLayer.dll
+C:\Users\OEN\source\repos\FruitsEcommerce\FruitsEcommerce\bin\Debug\BusinessLayer.pdb
+C:\Users\OEN\source\repos\FruitsEcommerce\FruitsEcommerce\bin\Debug\DataAccessLayer.pdb
+C:\Users\OEN\source\repos\FruitsEcommerce\FruitsEcommerce\obj\Debug\FruitsEc.55DB4588.Up2Date
