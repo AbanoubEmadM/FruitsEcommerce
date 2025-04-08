@@ -18,6 +18,14 @@ namespace BusinessLayer
         {
             return clsDataAccessLayer.GetProductsWithCategory(Category);
         }
+        public static bool AddToCart(int UserID, int ProductID)
+        {
+            return clsDataAccessLayer.AddToCart(UserID, ProductID);
+        }
+        public static DataTable GetDataInCart(int UserID)
+        {
+            return clsDataAccessLayer.GetDataInCart(UserID);
 
+        }
     }
 }
