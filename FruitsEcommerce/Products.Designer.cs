@@ -76,6 +76,7 @@
             this.label11.TabIndex = 42;
             this.label11.Tag = "Books";
             this.label11.Text = "Juices";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label13
             // 
@@ -88,6 +89,7 @@
             this.label13.TabIndex = 41;
             this.label13.Tag = "Books";
             this.label13.Text = "Bread";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label10
             // 
@@ -101,6 +103,7 @@
             this.label10.TabIndex = 40;
             this.label10.Tag = "Books";
             this.label10.Text = "All";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label9
             // 
@@ -112,6 +115,7 @@
             this.label9.Size = new System.Drawing.Size(48, 19);
             this.label9.TabIndex = 39;
             this.label9.Text = "Fruits";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label8
             // 
@@ -124,6 +128,7 @@
             this.label8.TabIndex = 38;
             this.label8.Tag = "Books";
             this.label8.Text = "Vegetables";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label2
             // 

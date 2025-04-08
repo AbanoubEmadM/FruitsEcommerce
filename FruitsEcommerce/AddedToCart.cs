@@ -37,6 +37,30 @@ namespace FruitsEcommerce
                 nameLabel.Text = row["Name"].ToString();
                 nameLabel.Font = new Font("Tahoma", 12);
 
+                Button button = new Button();
+                button.Text = "Remove From Cart";
+                button.Size = new Size(150, 30);
+                button.BackColor = Color.FromArgb(120, 177, 68);
+                button.Font = new Font(button.Font, FontStyle.Bold);
+                button.ForeColor = Color.White;
+                button.FlatStyle = FlatStyle.Flat;
+                button.Cursor = Cursors.Hand;
+
+                button.Click += (s, e) =>
+                {
+                    if (clsProduct.RemoveFromCart(1, (int)row["ID"]))
+                    {
+                        // Handle button click event
+                        MessageBox.Show($"Removed {row["Name"]} From Cart.", "Remove From Cart", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        // Handle Error
+                        MessageBox.Show($"Error: Cannot Remove {row["Name"]} From Cart", "Remove From Cart", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                };
+
+
                 Label priceLabel = new Label();
                 priceLabel.Text = "$" + row["Price"].ToString();
                 priceLabel.AutoSize = true;
@@ -45,10 +69,28 @@ namespace FruitsEcommerce
                 panel.Controls.Add(pictureBox);
                 panel.Controls.Add(nameLabel);
                 panel.Controls.Add(priceLabel);
+                panel.Controls.Add(button);
+
+
+
+                // Add controls to panel
+                panel.Controls.Add(pictureBox);
+                panel.Controls.Add(nameLabel);
+                panel.Controls.Add(priceLabel);
+                panel.Controls.Add(button); // <-- This was missing!
 
                 // Layout controls inside panel
+                pictureBox.Top = 10;
+                pictureBox.Left = 10;
+
                 nameLabel.Top = pictureBox.Bottom + 5;
+                nameLabel.Left = 10;
+
                 priceLabel.Top = nameLabel.Bottom + 5;
+                priceLabel.Left = 10;
+
+                button.Top = priceLabel.Bottom + 10;
+                button.Left = 10;
 
                 flowLayoutPanel1.Controls.Add(panel);
 

@@ -22,6 +22,11 @@ namespace BusinessLayer
         {
             return clsDataAccessLayer.AddToCart(UserID, ProductID);
         }
+        public static bool RemoveFromCart(int UserID, int ProductID)
+        {
+            return clsDataAccessLayer.RemoveFromCart(UserID, ProductID);
+        }
+
         public static DataTable GetDataInCart(int UserID)
         {
             return clsDataAccessLayer.GetDataInCart(UserID);
