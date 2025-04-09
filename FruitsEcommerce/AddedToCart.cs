@@ -19,7 +19,9 @@ namespace FruitsEcommerce
         }
         private void ShowData()
         {
-            DataTable Data = clsProduct.GetDataInCart(1);
+            int UserID = clsProduct.GetUserID(GlobalUser.Instance.LoggedInUser.Email, GlobalUser.Instance.LoggedInUser.Password);
+
+            DataTable Data = clsProduct.GetDataInCart(UserID);
 
             foreach (DataRow row in Data.Rows)
             {
@@ -48,7 +50,7 @@ namespace FruitsEcommerce
 
                 button.Click += (s, e) =>
                 {
-                    if (clsProduct.RemoveFromCart(1, (int)row["ID"]))
+                    if (clsProduct.RemoveFromCart(UserID, (int)row["ID"]))
                     {
                         // Handle button click event
                         MessageBox.Show($"Removed {row["Name"]} From Cart.", "Remove From Cart", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -116,7 +118,6 @@ namespace FruitsEcommerce
         private void AddedToCart_Load(object sender, EventArgs e)
         {
             ShowData();
-
         }
     }
 }

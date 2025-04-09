@@ -30,6 +30,7 @@
         {
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.panel22 = new System.Windows.Forms.Panel();
@@ -44,16 +45,15 @@
             this.panel28 = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.products1 = new FruitsEcommerce.Products();
-            this.addedToCart1 = new FruitsEcommerce.AddedToCart();
+            this.login1 = new FruitsEcommerce.Login();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel11.SuspendLayout();
             this.panel23.SuspendLayout();
             this.panel25.SuspendLayout();
             this.panel27.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -66,7 +66,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // panel8
             // 
@@ -81,6 +80,16 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1229, 89);
             this.panel8.TabIndex = 6;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::FruitsEcommerce.Properties.Resources.logo_o_w_300x;
+            this.pictureBox1.Location = new System.Drawing.Point(83, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(236, 56);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel11
             // 
@@ -202,6 +211,7 @@
             this.label14.Size = new System.Drawing.Size(74, 19);
             this.label14.TabIndex = 2;
             this.label14.Text = "Account";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // panel28
             // 
@@ -214,16 +224,6 @@
             this.panel28.Size = new System.Drawing.Size(39, 31);
             this.panel28.TabIndex = 1;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::FruitsEcommerce.Properties.Resources.logo_o_w_300x;
-            this.pictureBox1.Location = new System.Drawing.Point(83, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(236, 56);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // products1
             // 
             this.products1.AutoScroll = true;
@@ -233,13 +233,12 @@
             this.products1.TabIndex = 7;
             this.products1.Load += new System.EventHandler(this.products1_Load);
             // 
-            // addedToCart1
+            // login1
             // 
-            this.addedToCart1.AutoScroll = true;
-            this.addedToCart1.Location = new System.Drawing.Point(0, 0);
-            this.addedToCart1.Name = "addedToCart1";
-            this.addedToCart1.Size = new System.Drawing.Size(1229, 862);
-            this.addedToCart1.TabIndex = 8;
+            this.login1.Location = new System.Drawing.Point(0, 82);
+            this.login1.Name = "login1";
+            this.login1.Size = new System.Drawing.Size(1229, 780);
+            this.login1.TabIndex = 9;
             // 
             // ucHome
             // 
@@ -250,11 +249,12 @@
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.products1);
-            this.Controls.Add(this.addedToCart1);
+            this.Controls.Add(this.login1);
             this.Name = "ucHome";
             this.Size = new System.Drawing.Size(1229, 862);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.panel23.ResumeLayout(false);
@@ -263,7 +263,6 @@
             this.panel25.PerformLayout();
             this.panel27.ResumeLayout(false);
             this.panel27.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -286,7 +285,7 @@
         private Products products1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
-        private AddedToCart addedToCart1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Login login1;
     }
 }

@@ -124,11 +124,14 @@ namespace DataAccessLayer
             try
             {
                 connection.Open();
+
                 SqlDataReader reader = command.ExecuteReader();
+                
                 if (reader.HasRows)
                 {
                     dataTable.Load(reader);
                 }
+
                 reader.Close();
             }
             catch (Exception ex)
@@ -214,5 +217,78 @@ namespace DataAccessLayer
             return isRemoved;
 
         }
+        public static bool Login(string Email, string Password)
+        {
+            bool isLogged = false;
+
+            string query = "Select ID From Users Where Email = @Email And Password = @Password";
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@Email", Email);
+            command.Parameters.AddWithValue("@Password", Password);
+
+            try
+            {
+                connection.Open();
+                object result = command.ExecuteScalar();
+                if (result != null)
+                {
+                    isLogged = true;
+                }
+                else
+                {
+                    isLogged = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                isLogged = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return isLogged;
+        }
+        public static int GetUserID(string Email, string Password)
+        {
+            int ID = -1;
+
+            string query = "Select ID From Users Where Email = @Email And Password = @Password";
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@Email", Email);
+            command.Parameters.AddWithValue("@Password", Password);
+
+            try
+            {
+                connection.Open();
+                object result = command.ExecuteScalar();
+                if (result != null)
+                {
+                    ID = Convert.ToInt32(result);
+                }
+                else
+                {
+                    ID = -1;
+                }
+            }
+            catch (Exception ex)
+            {
+                ID = -1;
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return ID;
+        }
+
     }
 }

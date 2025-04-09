@@ -30,7 +30,14 @@ namespace BusinessLayer
         public static DataTable GetDataInCart(int UserID)
         {
             return clsDataAccessLayer.GetDataInCart(UserID);
-
+        }
+        public static bool Login(string Email, string Password)
+        {
+            return clsDataAccessLayer.Login(Email, Password);
+        }
+        public static int GetUserID(string Email, string Password)
+        {
+            return clsDataAccessLayer.GetUserID(Email, Password);
         }
     }
 }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using static System.Net.Mime.MediaTypeNames;
+using BusinessLayer;
 
 namespace FruitsEcommerce
 {
@@ -18,15 +19,8 @@ namespace FruitsEcommerce
         {
             InitializeComponent();
         }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void products1_Load(object sender, EventArgs e)
         {
-            addedToCart1.Dock = DockStyle.Fill;
             products1.Dock = DockStyle.Fill;
         }
 
@@ -37,17 +31,25 @@ namespace FruitsEcommerce
 
         private void label12_Click(object sender, EventArgs e)
         {
-            addedToCart1.BringToFront();
-        }
+            if (GlobalUser.Instance.IsLoggedIn)
+            {
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
+                var addedToCart = new AddedToCart();
+                this.Controls.Clear();
+                this.Controls.Add(addedToCart);
+                addedToCart.BringToFront();
+            }
 
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.BringToFront();
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+            login1.BringToFront();
         }
     }
       
