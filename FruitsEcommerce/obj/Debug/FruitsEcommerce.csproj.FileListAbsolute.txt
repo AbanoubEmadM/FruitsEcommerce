@@ -17,3 +17,4 @@ C:\Users\OEN\source\repos\FruitsEcommerce\FruitsEcommerce\bin\Debug\DataAccessLa
 C:\Users\OEN\source\repos\FruitsEcommerce\FruitsEcommerce\obj\Debug\FruitsEc.55DB4588.Up2Date
 C:\Users\OEN\source\repos\FruitsEcommerce\FruitsEcommerce\obj\Debug\FruitsEcommerce.AddedToCart.resources
 C:\Users\OEN\source\repos\FruitsEcommerce\FruitsEcommerce\obj\Debug\FruitsEcommerce.Login.resources
+C:\Users\OEN\source\repos\FruitsEcommerce\FruitsEcommerce\obj\Debug\FruitsEcommerce.AddedToWishlist.resources

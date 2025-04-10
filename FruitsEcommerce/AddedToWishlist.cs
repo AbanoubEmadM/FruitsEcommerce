@@ -11,9 +11,9 @@ using BusinessLayer;
 
 namespace FruitsEcommerce
 {
-    public partial class AddedToCart : UserControl
+    public partial class AddedToWishlist: UserControl
     {
-        public AddedToCart()
+        public AddedToWishlist()
         {
             InitializeComponent();
         }
@@ -21,12 +21,12 @@ namespace FruitsEcommerce
         {
             int UserID = -1;
 
-            if(GlobalUser.Instance.IsLoggedIn)
+            if (GlobalUser.Instance.IsLoggedIn)
             {
                 UserID = clsProduct.GetUserID(GlobalUser.Instance.LoggedInUser.Email, GlobalUser.Instance.LoggedInUser.Password);
             }
 
-            DataTable Data = clsProduct.GetDataInCart(UserID);
+            DataTable Data = clsProduct.GetDataInWishlist(UserID);
 
             foreach (DataRow row in Data.Rows)
             {
@@ -45,7 +45,7 @@ namespace FruitsEcommerce
                 nameLabel.Font = new Font("Tahoma", 12);
 
                 Button button = new Button();
-                button.Text = "Remove From Cart";
+                button.Text = "Remove From Wishlist";
                 button.Size = new Size(150, 30);
                 button.BackColor = Color.FromArgb(120, 177, 68);
                 button.Font = new Font(button.Font, FontStyle.Bold);
@@ -55,21 +55,21 @@ namespace FruitsEcommerce
 
                 button.Click += (s, e) =>
                 {
-                    if (clsProduct.RemoveFromCart(UserID, (int)row["ID"]))
+                    if (clsProduct.RemoveFromWishlist(UserID, (int)row["ID"]))
                     {
                         // Handle button click event
-                        MessageBox.Show($"Removed {row["Name"]} From Cart.", "Remove From Cart", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show($"Removed {row["Name"]} From Wishlist.", "Remove From Wishlist", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Hide();
                         Form1 parentForm = this.ParentForm as Form1;
                         if (parentForm != null)
                         {
-                            parentForm.LoadControl(new AddedToCart());
+                            parentForm.LoadControl(new AddedToWishlist());
                         }
                     }
                     else
                     {
                         // Handle Error
-                        MessageBox.Show($"Error: Cannot Remove {row["Name"]} From Cart", "Remove From Cart", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show($"Error: Cannot Remove {row["Name"]} From Wishlist", "Remove From Wishlist", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 };
 
@@ -125,34 +125,15 @@ namespace FruitsEcommerce
             }
 
         }
-        private void AddedToCart_Load(object sender, EventArgs e)
-        {
-            ShowData();
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void fileSystemWatcher1_Changed(object sender, System.IO.FileSystemEventArgs e)
+        private void AddedToWishlist_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+            ShowData();
         }
     }
 }

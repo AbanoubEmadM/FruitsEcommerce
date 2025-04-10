@@ -56,6 +56,12 @@
     <Compile Include="AddedToCart.Designer.cs">
       <DependentUpon>AddedToCart.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddedToWishlist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddedToWishlist.Designer.cs">
+      <DependentUpon>AddedToWishlist.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     </Compile>
     <EmbeddedResource Include="AddedToCart.resx">
       <DependentUpon>AddedToCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddedToWishlist.resx">
+      <DependentUpon>AddedToWishlist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

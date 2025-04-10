@@ -150,7 +150,7 @@ namespace DataAccessLayer
         {
             DataTable dataTable = new DataTable();
 
-            string query = "SELECT Products.Name, Products.ImagePath, Products.Price FROM Users INNER JOIN AddedToWishlist ON Users.ID = AddedToWishlist.UserID \r\nINNER JOIN Products ON AddedToWishlist.ProductID = Products.ID\r\n Where Users.ID = @UserID";
+            string query = "SELECT Products.Name, Products.ImagePath, Products.Price, Products.ID FROM Users INNER JOIN AddedToWishlist ON Users.ID = AddedToWishlist.UserID \r\nINNER JOIN Products ON AddedToWishlist.ProductID = Products.ID\r\n Where Users.ID = @UserID";
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
@@ -185,6 +185,43 @@ namespace DataAccessLayer
             bool isRemoved = false;
 
             string query = "Delete From AddedToCart Where AddedToCart.UserID = @UserID And AddedToCart.ProductID = @ProductID";
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@UserID", UserID);
+            command.Parameters.AddWithValue("@ProductID", ProductID);
+
+            try
+            {
+                connection.Open();
+                int rowsAffected = command.ExecuteNonQuery();
+                if (rowsAffected > 0)
+                {
+                    isRemoved = true;
+                }
+                else
+                {
+                    isRemoved = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                isRemoved = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return isRemoved;
+
+        }
+        public static bool RemoveFromWishlist(int UserID, int ProductID)
+        {
+            bool isRemoved = false;
+
+            string query = "Delete From AddedToWishlist Where AddedToWishlist.UserID = @UserID And AddedToWishlist.ProductID = @ProductID";
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 

@@ -74,6 +74,11 @@ namespace FruitsEcommerce
             }
 
         }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            addedToWishlist1.BringToFront();
+        }
     }
       
     

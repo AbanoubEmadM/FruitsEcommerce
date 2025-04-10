@@ -48,6 +48,7 @@
             this.products1 = new FruitsEcommerce.Products();
             this.login1 = new FruitsEcommerce.Login();
             this.addedToCart1 = new FruitsEcommerce.AddedToCart();
+            this.addedToWishlist1 = new FruitsEcommerce.AddedToWishlist();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -180,6 +181,7 @@
             this.label13.Size = new System.Drawing.Size(87, 19);
             this.label13.TabIndex = 3;
             this.label13.Text = "WhishList";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // panel26
             // 
@@ -256,6 +258,13 @@
             this.addedToCart1.Size = new System.Drawing.Size(1229, 855);
             this.addedToCart1.TabIndex = 10;
             // 
+            // addedToWishlist1
+            // 
+            this.addedToWishlist1.Location = new System.Drawing.Point(0, 82);
+            this.addedToWishlist1.Name = "addedToWishlist1";
+            this.addedToWishlist1.Size = new System.Drawing.Size(1229, 773);
+            this.addedToWishlist1.TabIndex = 11;
+            // 
             // ucHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,6 +276,7 @@
             this.Controls.Add(this.products1);
             this.Controls.Add(this.login1);
             this.Controls.Add(this.addedToCart1);
+            this.Controls.Add(this.addedToWishlist1);
             this.Name = "ucHome";
             this.Size = new System.Drawing.Size(1229, 855);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -306,5 +316,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private Login login1;
         private AddedToCart addedToCart1;
+        private AddedToWishlist addedToWishlist1;
     }
 }

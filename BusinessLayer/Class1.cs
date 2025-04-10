@@ -26,11 +26,20 @@ namespace BusinessLayer
         {
             return clsDataAccessLayer.RemoveFromCart(UserID, ProductID);
         }
+        public static bool RemoveFromWishlist(int UserID, int ProductID)
+        {
+            return clsDataAccessLayer.RemoveFromWishlist(UserID, ProductID);
+        }
 
         public static DataTable GetDataInCart(int UserID)
         {
             return clsDataAccessLayer.GetDataInCart(UserID);
         }
+        public static DataTable GetDataInWishlist(int UserID)
+        {
+            return clsDataAccessLayer.GetDataInWishlist(UserID);
+        }
+
         public static bool Login(string Email, string Password)
         {
             return clsDataAccessLayer.Login(Email, Password);
