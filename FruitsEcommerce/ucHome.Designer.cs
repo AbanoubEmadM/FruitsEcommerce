@@ -47,6 +47,7 @@
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.products1 = new FruitsEcommerce.Products();
             this.login1 = new FruitsEcommerce.Login();
+            this.addedToCart1 = new FruitsEcommerce.AddedToCart();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,8 +63,8 @@
             this.pictureBox2.Image = global::FruitsEcommerce.Properties.Resources.background;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1229, 862);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.Size = new System.Drawing.Size(1229, 855);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
@@ -227,18 +228,33 @@
             // products1
             // 
             this.products1.AutoScroll = true;
-            this.products1.Location = new System.Drawing.Point(3, 0);
+            this.products1.AutoSize = true;
+            this.products1.Location = new System.Drawing.Point(0, 82);
             this.products1.Name = "products1";
-            this.products1.Size = new System.Drawing.Size(1226, 862);
+            this.products1.Size = new System.Drawing.Size(1229, 785);
             this.products1.TabIndex = 7;
             this.products1.Load += new System.EventHandler(this.products1_Load);
             // 
             // login1
             // 
+            this.login1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.login1.AutoSize = true;
             this.login1.Location = new System.Drawing.Point(0, 82);
             this.login1.Name = "login1";
-            this.login1.Size = new System.Drawing.Size(1229, 780);
+            this.login1.Size = new System.Drawing.Size(1229, 832);
             this.login1.TabIndex = 9;
+            // 
+            // addedToCart1
+            // 
+            this.addedToCart1.AutoScroll = true;
+            this.addedToCart1.AutoSize = true;
+            this.addedToCart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addedToCart1.Location = new System.Drawing.Point(0, 0);
+            this.addedToCart1.Name = "addedToCart1";
+            this.addedToCart1.Size = new System.Drawing.Size(1229, 855);
+            this.addedToCart1.TabIndex = 10;
             // 
             // ucHome
             // 
@@ -250,8 +266,9 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.products1);
             this.Controls.Add(this.login1);
+            this.Controls.Add(this.addedToCart1);
             this.Name = "ucHome";
-            this.Size = new System.Drawing.Size(1229, 862);
+            this.Size = new System.Drawing.Size(1229, 855);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -264,6 +281,7 @@
             this.panel27.ResumeLayout(false);
             this.panel27.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -287,5 +305,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Login login1;
+        private AddedToCart addedToCart1;
     }
 }

@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ucHome1 = new FruitsEcommerce.ucHome();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // ucHome1
+            // panel1
             // 
-            this.ucHome1.BackColor = System.Drawing.Color.White;
-            this.ucHome1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ucHome1.Location = new System.Drawing.Point(-7, 1);
-            this.ucHome1.Name = "ucHome1";
-            this.ucHome1.Size = new System.Drawing.Size(1205, 846);
-            this.ucHome1.TabIndex = 0;
-            this.ucHome1.Load += new System.EventHandler(this.ucHome1_Load_1);
+            this.panel1.AutoScroll = true;
+            this.panel1.AutoSize = true;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1199, 840);
+            this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Form1
             // 
@@ -47,17 +48,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1199, 840);
-            this.Controls.Add(this.ucHome1);
+            this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private ucHome ucHome1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

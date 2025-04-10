@@ -221,7 +221,7 @@ namespace DataAccessLayer
         {
             bool isLogged = false;
 
-            string query = "Select ID From Users Where Email = @Email And Password = @Password";
+            string query = "Select Name From Users Where Email = @Email And Password = @Password";
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
@@ -288,6 +288,42 @@ namespace DataAccessLayer
                 connection.Close();
             }
             return ID;
+        }
+        public static string GetUserName(string Email, string Password)
+        {
+            string Name = String.Empty;
+
+            string query = "Select Name From Users Where Email = @Email And Password = @Password";
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@Email", Email);
+            command.Parameters.AddWithValue("@Password", Password);
+
+            try
+            {
+                connection.Open();
+                object result = command.ExecuteScalar();
+                if (result != null)
+                {
+                    Name = result.ToString();
+                }
+                else
+                {
+                    Name = String.Empty;
+                }
+            }
+            catch (Exception ex)
+            {
+                Name = String.Empty;
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return Name;
         }
 
     }

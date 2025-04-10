@@ -39,5 +39,10 @@ namespace BusinessLayer
         {
             return clsDataAccessLayer.GetUserID(Email, Password);
         }
+        public static string GetUserName(string Email, string Password)
+        {
+            return clsDataAccessLayer.GetUserName(Email, Password);
+        }
+
     }
 }

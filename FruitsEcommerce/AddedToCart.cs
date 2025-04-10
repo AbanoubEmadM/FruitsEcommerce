@@ -19,7 +19,12 @@ namespace FruitsEcommerce
         }
         private void ShowData()
         {
-            int UserID = clsProduct.GetUserID(GlobalUser.Instance.LoggedInUser.Email, GlobalUser.Instance.LoggedInUser.Password);
+            int UserID = -1;
+
+            if(GlobalUser.Instance.IsLoggedIn)
+            {
+                UserID = clsProduct.GetUserID(GlobalUser.Instance.LoggedInUser.Email, GlobalUser.Instance.LoggedInUser.Password);
+            }
 
             DataTable Data = clsProduct.GetDataInCart(UserID);
 
@@ -118,6 +123,11 @@ namespace FruitsEcommerce
         private void AddedToCart_Load(object sender, EventArgs e)
         {
             ShowData();
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -29,29 +29,57 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Email_login = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Password_login = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.Password_login = new System.Windows.Forms.TextBox();
-            this.Email_login = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.Email_login);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.Password_login);
-            this.panel1.Controls.Add(this.Email_login);
             this.panel1.Location = new System.Drawing.Point(626, 210);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(590, 619);
             this.panel1.TabIndex = 0;
+            // 
+            // Email_login
+            // 
+            this.Email_login.Location = new System.Drawing.Point(170, 140);
+            this.Email_login.Multiline = true;
+            this.Email_login.Name = "Email_login";
+            this.Email_login.Size = new System.Drawing.Size(209, 39);
+            this.Email_login.TabIndex = 7;
+            this.Email_login.Text = "charlie@example.com";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(244, 304);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Submit";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Password_login
+            // 
+            this.Password_login.Location = new System.Drawing.Point(170, 227);
+            this.Password_login.Multiline = true;
+            this.Password_login.Name = "Password_login";
+            this.Password_login.Size = new System.Drawing.Size(209, 37);
+            this.Password_login.TabIndex = 8;
+            this.Password_login.Text = "charlie99";
             // 
             // label1
             // 
@@ -84,14 +112,14 @@
             this.panel2.Size = new System.Drawing.Size(590, 619);
             this.panel2.TabIndex = 4;
             // 
-            // textBox4
+            // button2
             // 
-            this.textBox4.Location = new System.Drawing.Point(195, 128);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(203, 41);
-            this.textBox4.TabIndex = 0;
-            this.textBox4.Text = "Name";
+            this.button2.Location = new System.Drawing.Point(225, 448);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(101, 26);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Create Account";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // textBox3
             // 
@@ -111,42 +139,14 @@
             this.textBox5.TabIndex = 5;
             this.textBox5.Text = "Email";
             // 
-            // Password_login
+            // textBox4
             // 
-            this.Password_login.Location = new System.Drawing.Point(180, 223);
-            this.Password_login.Multiline = true;
-            this.Password_login.Name = "Password_login";
-            this.Password_login.Size = new System.Drawing.Size(209, 37);
-            this.Password_login.TabIndex = 8;
-            this.Password_login.Text = "Password";
-            // 
-            // Email_login
-            // 
-            this.Email_login.Location = new System.Drawing.Point(180, 121);
-            this.Email_login.Multiline = true;
-            this.Email_login.Name = "Email_login";
-            this.Email_login.Size = new System.Drawing.Size(209, 39);
-            this.Email_login.TabIndex = 7;
-            this.Email_login.Text = "Email";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(244, 304);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Submit";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(225, 448);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 26);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Create Account";
-            this.button2.UseVisualStyleBackColor = true;
+            this.textBox4.Location = new System.Drawing.Point(195, 128);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(203, 41);
+            this.textBox4.TabIndex = 0;
+            this.textBox4.Text = "Name";
             // 
             // Login
             // 
